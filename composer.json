@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phois/whois": "dev-master",
+        "j4mie/idiorm": "dev-master"
+    }
+}
