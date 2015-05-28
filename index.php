@@ -2,20 +2,16 @@
 // composer
 require 'vendor/autoload.php';
 
-$sld = 'ads-clicks.ru';
+$domain = 'шкафы.рф';
+$whois = new Novutec\WhoisParser\Parser();
+$whois->setDateFormat('%d.%m.%Y');
+$date = $whois->lookup($domain)->expires;
 
-$domain = new Phois\Whois\Whois($sld);
 
-$whois_answer = $domain->info();
-
-echo $whois_answer;
-
-preg_match('/^free-date:\s+(\S+)/im', $whois_answer, $matches);
-
-if ($domain->isAvailable()) {
+if (!$date) {
     echo "Домен свободен\n";
 } else {
-    echo "Следующая проверка: $matches[1]\n";
+    echo "Следующая проверка: $date\n";
 }
 
 ?>

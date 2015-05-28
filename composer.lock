@@ -4,115 +4,133 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "33b36795d4d621197964860f51d86e89",
+    "hash": "61eebbe8f2e941239740c258ebe5290d",
     "packages": [
         {
-            "name": "j4mie/idiorm",
-            "version": "dev-master",
+            "name": "novutec/domainparser",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/j4mie/idiorm.git",
-                "reference": "1db83c9fee8a6418d92fd6fa87447d31faf88842"
+                "url": "https://github.com/3name/DomainParser.git",
+                "reference": "c5d0d845e5a88e1c28c9caa78d8834c340f19893"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/j4mie/idiorm/zipball/1db83c9fee8a6418d92fd6fa87447d31faf88842",
-                "reference": "1db83c9fee8a6418d92fd6fa87447d31faf88842",
+                "url": "https://api.github.com/repos/3name/DomainParser/zipball/c5d0d845e5a88e1c28c9caa78d8834c340f19893",
+                "reference": "c5d0d845e5a88e1c28c9caa78d8834c340f19893",
                 "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
             },
             "type": "library",
             "autoload": {
                 "classmap": [
-                    "idiorm.php"
+                    "Parser.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-2-Clause",
-                "BSD-3-Clause",
-                "BSD-4-Clause"
+                "Apache-2.0"
             ],
-            "authors": [
-                {
-                    "name": "Simon Holywell",
-                    "email": "treffynnon@php.net",
-                    "homepage": "http://simonholywell.com",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Jamie Matthews",
-                    "email": "jamie.matthews@gmail.com",
-                    "homepage": "http://j4mie.org",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Durham Hale",
-                    "email": "me@durhamhale.com",
-                    "homepage": "http://durhamhale.com",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "A lightweight nearly-zero-configuration object-relational mapper and fluent query builder for PHP5",
-            "homepage": "http://j4mie.github.com/idiormandparis",
+            "description": "A domain name parser to parse and to validate a domain name.",
+            "homepage": "https://github.com/3name/DomainParser/",
             "keywords": [
-                "idiorm",
-                "orm",
-                "query builder"
+                "domain",
+                "domainparser",
+                "php"
             ],
-            "time": "2015-01-19 12:53:20"
+            "time": "2015-04-11 21:37:57"
         },
         {
-            "name": "phois/whois",
+            "name": "novutec/whoisparser",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/regru/php-whois.git",
-                "reference": "edbb5352d6b48326db81cd60d9f8e1d40132c825"
+                "url": "https://github.com/3name/WhoisParser.git",
+                "reference": "90990514295c747d7700b9f72323fee062e07648"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/regru/php-whois/zipball/edbb5352d6b48326db81cd60d9f8e1d40132c825",
-                "reference": "edbb5352d6b48326db81cd60d9f8e1d40132c825",
+                "url": "https://api.github.com/repos/3name/WhoisParser/zipball/90990514295c747d7700b9f72323fee062e07648",
+                "reference": "90990514295c747d7700b9f72323fee062e07648",
                 "shasum": ""
             },
             "require": {
-                "ext-curl": "*",
-                "php": ">=5.3.2"
+                "novutec/domainparser": ">=2.0.3"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Phois\\Whois": "src"
+                "psr-4": {
+                    "Novutec\\WhoisParser\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "Apache-2.0"
+            ],
+            "description": "Lookup domain names, IP addresses and AS numbers by WHOIS.",
+            "homepage": "https://github.com/3name/WhoisParser/",
+            "keywords": [
+                "php",
+                "whois",
+                "whoisparser"
+            ],
+            "time": "2015-05-21 19:25:53"
+        },
+        {
+            "name": "phpwhois/idna-convert",
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpWhois/idna-convert.git",
+                "reference": "663c4b170d4e542946e04840ee212e6c896ac80b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpWhois/idna-convert/zipball/663c4b170d4e542946e04840ee212e6c896ac80b",
+                "reference": "663c4b170d4e542946e04840ee212e6c896ac80b",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "idna_convert.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
             ],
             "authors": [
                 {
-                    "name": "David Rivera",
-                    "email": "David.R.Rivera193@gmail.com",
-                    "homepage": "http://www.protodx.com",
-                    "role": "Systems Developer"
+                    "name": "Matthias Sommerfeld",
+                    "email": "phlymail@phlylabs.de",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Dmitry Lukashin",
+                    "email": "dmitry@lukashin.ru",
+                    "role": "Maintainer"
                 }
             ],
-            "description": "Whois client.",
+            "description": "idna-convert library based on http://idnaconv.phlymail.de/",
+            "homepage": "http://idnaconv.phlymail.de/",
             "keywords": [
-                "whois"
+                "idn",
+                "idna",
+                "php"
             ],
-            "time": "2015-03-26 08:09:10"
+            "time": "2015-01-09 03:31:11"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "phois/whois": 20,
-        "j4mie/idiorm": 20
+        "novutec/whoisparser": 20
     },
     "prefer-stable": false,
     "platform": [],
